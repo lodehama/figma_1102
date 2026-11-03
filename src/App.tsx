@@ -5,7 +5,9 @@ import viteLogo from './assets/vite.svg'
 import appleLogo from './assets/apple.png'
 import './App.css'
 
-function App() {
+type AppProps = {title: string}
+
+function App({title = 'Vite + React'}: AppProps) {
   const [count, setCount] = useState(0)
   const [likes, setLikes] = useState(0)
 
@@ -24,6 +26,7 @@ function App() {
             Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
           </p>
         </div>
+        <h1>{title}</h1>
         <p className="counter-text"> 방문자 숫자 : {count}</p>
         <div className="button-label">
           <span>Count</span>
